@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TafsirMimpiJawa.ID - Makna Mimpi Budaya Jawa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Javanese&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="manifest" href="data:application/manifest+json,{
+    \"name\": \"TafsirMimpiJawa.ID\",
+    \"short_name\": \"TafsirJawa\",
+    \"start_url\": \".\",
+    \"display\": \"standalone\",
+    \"background_color\": \"#1a0f0d\",
+    \"theme_color\": \"#d4a373\",
+    \"icons\": [{
+      \"src\": \"assets/icons/dream.png\",
+      \"sizes\": \"96x96\",
+      \"type\": \"image/png\"
+    }]
+  }">
+</head>
+<body>
+  <div class="header">
+    <h1>TafsirMimpiJawa.ID</h1>
+    <p>Makna Filosofis Mimpi dalam Budaya Jawa – Berdasarkan Primbon</p>
+  </div>
+
+  <div class="container">
+    <!-- Pencarian & Hasil -->
+    <div class="card">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Cari mimpi: ular, banjir, menikah..." autocomplete="off">
+        <i class="fas fa-search"></i>
+      </div>
+
+      <div id="result" class="result" style="display:none;"></div>
+      <div id="noResult" class="result" style="display:none;text-align:center;color:#a8a29e;">
+        <p><em>Tidak ditemukan. Coba kata lain atau pilih kategori.</em></p>
+      </div>
+    </div>
+
+    <!-- Kategori & Daftar -->
+    <div class="card">
+      <h3 class="section-title">Kategori Mimpi</h3>
+      <div class="categories">
+        <button class="cat-btn active" data-cat="all">Semua</button>
+        <button class="cat-btn" data-cat="alam">Alam</button>
+        <button class="cat-btn" data-cat="hewan">Hewan</button>
+        <button class="cat-btn" data-cat="simbol">Simbol Jawa</button>
+        <button class="cat-btn" data-cat="manusia">Manusia</button>
+      </div>
+
+      <div class="mimpi-list" id="mimpiList">
+        <!-- Daftar mimpi dari JS -->
+      </div>
+    </div>
+  </div>
+
+  <div class="info">
+    Penafsiran ini bersifat simbolis & filosofis, bukan ramalan mutlak. Gunakan untuk refleksi diri & pelestarian budaya Jawa.
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
